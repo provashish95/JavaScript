@@ -1,5 +1,7 @@
-function sum(){
-    console.log("hello coding");
-}
+let x= 30;
+let y = 20; 
+// console.log(x+y);
 
-sum();
+function colorStyle(){
+    document.getElementById('demo').style.color='red';
+}

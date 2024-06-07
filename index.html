@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=" Provashish Roy" content=" Provashish Roy">
+    <title>JavaScript</title>
+
+    <script>
+        function myFunction(){
+            document.getElementById('demo').innerHTML='Good morning everyone , I am Provashish Roy. and thanks to all of you that its a great opportunity for me to introduce my selft infornt of you.';
+        }
+    </script>
+</head>
+<body>
+    <p id="demo">hello guys How are you all ? </p>
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML='My Name is Provashish Roy'">Click me</button>
+
+    <button type="button" onclick="document.getElementById('demo').style.fontSize='40px'">Change your text size</button>
+
+    <button type="button" onclick="document.getElementById('demo').style.display='none'">Hide all text</button>
+    <button type="button" onclick="document.getElementById('demo').style.display='block'">Show all text</button>
+    <button type="button" onclick="myFunction()">Say somthing</button>
+    <button type="button" onclick="colorStyle()">Change color</button>
+
+    
+    <script src="./basic.js"></script>
+
+</body>
+</html>
