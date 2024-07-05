@@ -28,3 +28,19 @@ const cars = ["Saab", "Volvo", "BMW"];
 
 // Date object:
 const date = new Date("2022-03-25");
+
+function myFunction(a,b){
+    return a * b;
+}
+
+let multiplication = myFunction(3,4);
+
+// console.log(multiplication);
+
+function farhenhight(a){
+    let Cell = (5/9) * (a - 32);
+    return Cell;
+}
+
+let celcius = farhenhight(77);
+console.log(celcius);
