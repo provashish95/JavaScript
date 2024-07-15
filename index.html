@@ -24,8 +24,12 @@
     <button type="button" onclick="myFunction()">Say somthing</button>
     <button type="button" onclick="colorStyle()">Change color</button>
 
+
+
     <br>
     <br>
+
+    <p id="sum"></p>
 
 
     <script src="./basic.js"></script>
@@ -34,7 +38,16 @@
         //    window.alert(30+40);
         //    alert(100+200);
         // console.log(300+100);
-    </script>
+
+
+        function jog(a , b){
+            return a + b; 
+        }
+        let result = jog; 
+        console.log(result);
+        
+        document.getElementById("sum").innerHTML = result;
+        </script>
 
 </body>
 </html>

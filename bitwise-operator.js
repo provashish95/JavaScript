@@ -43,4 +43,17 @@ function farhenhight(a){
 }
 
 let celcius = farhenhight(77);
-console.log(celcius);
+// console.log(celcius);
+
+
+
+
+
+
+
+
+
+
+
+
+

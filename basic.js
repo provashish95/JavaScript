@@ -17,8 +17,8 @@ let sum = 5 + 5;
 let sum1 = "5" + 5; 
 let string = "hello" + 5;
 
-console.log(sum);
-console.log(sum1);
-console.log(string);
+// console.log(sum);
+// console.log(sum1);
+// console.log(string);
 
 
