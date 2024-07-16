@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body>
+    
+<button onclick="document.getElementById('demo').innerHTML=Date()">click me </button>
+<br>
+<br>
+<br>
+<button onclick="this.innerHTML=Date()">click this</button>
+<br>
+<br>
+<br>
+<button onmouseover="display()">click here</button>
+
+
+<p id="demo"></p>
+
+
+<script>
+    function display(){
+        document.getElementById('demo').innerHTML = Date();
+    }
+</script>
+
+</body>
+</html>
