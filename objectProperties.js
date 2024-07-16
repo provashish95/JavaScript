@@ -38,6 +38,21 @@ var text = "My name is provashish roy";
 // console.log(text.toUpperCase());
 
 //displaying object by loop
-for(const properties in personeTwo){
-    console.log(`${properties} : ${personeTwo[properties]}`);
+// for(const properties in personeTwo){
+//     console.log(`${properties} : ${personeTwo[properties]}`);
+// }
+
+
+//object constructor here...
+function PersonThree(name, age, id){
+    this.name = name;
+    this.age = age;
+    this.id = id;
 }
+const myFather = new PersonThree("Surja Kanta Roy", 60, 101); 
+const myMother = new PersonThree("Sumitra rani roy", 50, 102); 
+const myBrother = new PersonThree("Suvashish Roy", 30, 103); 
+
+console.log(myFather.name);
+console.log(myMother.name);
+console.log(myBrother.name);
