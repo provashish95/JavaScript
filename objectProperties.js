@@ -30,6 +30,7 @@ const personeTwo = {
         return this.firstName + " "+ this.lastName + " and ID is " + this.id;
     }
 }
+
 //  console.log(personeTwo.fullName().toUpperCase());
 // console.log(personeTwo.fullName);
 
@@ -48,11 +49,14 @@ function PersonThree(name, age, id){
     this.name = name;
     this.age = age;
     this.id = id;
+    this.nationality = "Bangladeshi" //by default property
 }
 const myFather = new PersonThree("Surja Kanta Roy", 60, 101); 
 const myMother = new PersonThree("Sumitra rani roy", 50, 102); 
 const myBrother = new PersonThree("Suvashish Roy", 30, 103); 
 
-console.log(myFather.name);
-console.log(myMother.name);
-console.log(myBrother.name);
+PersonThree.prototype.NID = 232423424;
+
+console.log(myFather.name, myFather.nationality, myFather.NID);
+console.log(myMother.name, myMother.nationality);
+console.log(myBrother.name, myBrother.nationality);
