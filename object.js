@@ -6,7 +6,9 @@ const persone = {
     Address: "Mirpur-1", 
     phone : "01766552407"
 }; 
-// console.log(persone.name);
+
+// delete persone.job; 
+console.log(persone);
 
 //empty object here...
 const employee = {}; 
