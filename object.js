@@ -8,7 +8,7 @@ const persone = {
 }; 
 
 // delete persone.job; 
-console.log(persone);
+//console.log(persone);
 
 //empty object here...
 const employee = {}; 
@@ -34,10 +34,17 @@ const personeOne = {
 }
 // console.log(personeOne.fullName());
 
+//replace object properties...
 const demoOne = {
     name: "Provashish", 
-    age: 28
+    age: 28, 
+    job: "IT"
 }
 const x = demoOne; 
 x.age = 30;
 console.log(demoOne.age);
+
+//display object value by loop...
+for(let properties in demoOne){
+    console.log(demoOne[properties]);
+}
