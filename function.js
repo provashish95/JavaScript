@@ -1,48 +1,57 @@
-function multi(a, b){
-    return a * b;
+//Normal function or function statement ...
+function myFunction(num1, num2){
+    return num1 * num2; 
 }
 
-let x = multi(10, 2); // output: 20; 
-let y = multi; // output: Function 
-let text = "The age of foysal is "+ multi(10, 5) + " in 2024"; // output: The age of foysal is 50 in 2024 
-
-//Normal function here...
-function myFunction(){
-    let carName = 20; 
+//function in variable or function expression...
+var name1 = function(num1, num2){
+    return num1 * num2; 
 }
-// myFunction(); // output: 20;
 
-//Function variable here...
-var FunctionName = function(){
-    console.log("Hi I am provashish Roy");
-}
-// FunctionName(); // Hi I am provashish Roy;
 
-//function pass as a argument here...
+//pass function as a argument in the function...
 function callMyName(name, callback){
-    let age = 20; 
-    callback(age);
-    console.log("My name is" + name);
+    var age = 28; 
+    callback(age); 
+    console.log("print in the function and name is: " + name);
 }
 
 function hello(age){
-    console.log("My name is Provashish and my age is "+ age);
+    console.log("out of the function and age is: " + age);
 }
-// callMyName("Provashish Roy", hello);
+//callMyName("Provashish", hello);
 
+//return function from the function ...
 
-
-
-//function return a function here...
-function returnFunction(name){
-    console.log("My name is " + name);
-    return function option (menu)
-    {
-        console.log("My name is " + name + "and my fevrite food is "+ menu);
+function welcome(name){
+    console.log('Welcome mr. ' + name);
+    return function (menu){
+        console.log('My fevrite menu is '+ menu);
     }
 }
+//welcome('Provashish') ('Tea'); 
 
- returnFunction("Provashish") ("Tea"); 
-// returnFunction("Provashish", "Tea");
-// returnFunction ("Provashish");
-// returnFunction ("Tea");
+
+
+function changeValue(a){
+    console.log('value of the inside function before changing: ' + a); 
+    a = 10;
+    console.log('Value of the inside function after changing: '+ a);
+    return a; 
+}
+var a = 100;
+console.log('Value of a before changing function is applied: ' + a); 
+changeValue(a);
+console.log('Value of a after changing function is applied: '+ a); 
+
+
+function aFunction(a){
+    console.log('Before changing value: ' + a.one);
+    a.one = 'Two';
+    console.log('after changing value: ' + a.one);
+}
+const obj ={
+    one: 'one'
+}
+//aFunction(obj);
+

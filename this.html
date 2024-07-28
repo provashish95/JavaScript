@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword in javascript</title>
+</head>
+<body>
+    
+<h1>This keyword in javascript</h1>
+
+<script>
+
+    function globalThis(){
+        console.log(this);
+    }
+    globalThis();
+
+    function strictMode(){
+        'use strict';
+        console.log(this);
+    }
+    strictMode();
+
+    function unnamed(){
+        this.name = 'Provashish';
+    }
+
+    unnamed();
+    console.log(name);
+
+    const myCustomeObj ={
+        name: 'Provashish', 
+        age: 28, 
+        msg: function(){
+            console.log(this);
+        }
+    }
+    console.log(myCustomeObj.msg());
+
+    const myAnotherObj ={
+        name: 'Provashish', 
+        age: 27, 
+        job: 'IT',
+        secondObj: {
+            name: 'Tonmoy', 
+            msg: function(){ 
+                console.log(this);
+            }
+        }
+    }
+    //console.log(myAnotherObj.secondObj.msg());
+    console.log(myAnotherObj.secondObj.msg.call(myAnotherObj));
+
+
+
+//call() method here...
+var parentObj = {
+    name: 'Provashish', 
+    age: 29, 
+    job: 'IT',
+    childObj:{
+        name: 'Tonmoy', 
+        age: 20,
+        msg: function(){
+            console.log(this.name + ' is ' + this.age + ' years old');
+        }
+    }
+}
+ console.log(parentObj.childObj.msg.call(parentObj));
+
+
+const rahim ={
+    name: 'Rahim', 
+    dob: 1995, 
+    msg: function(currentYear){
+        console.log(this.name + ' is ' + (currentYear - this.dob) + ' years old');
+    }
+}
+console.log(rahim.msg(2024));
+const karim ={
+    name: 'Karim', 
+    dob: 2002
+}
+console.log(rahim.msg.call(karim, 2024));
+const riya ={
+    name: 'Riya', 
+    dob: 2002
+}
+console.log(rahim.msg.call(riya, 2024));
+
+//apply() method here...
+const mainObj = {
+    name: 'Provashish', 
+    dob: 1995, 
+    msg: function(currentYear, sms){
+        console.log(this.job + ' and '+ this.name + ' is '+ (currentYear - this.dob) + ' years old and ' + sms);
+    }
+}
+console.log(mainObj.msg(2024, 'hello'));
+
+const tonmoyRoy = {
+    name: 'Tonmoy', 
+    dob: 1996, 
+    job: 'IT'
+}
+console.log(mainObj.msg.apply(tonmoyRoy, [2024, 'Greatings']));
+</script>
+    
+</body>
+</html>
