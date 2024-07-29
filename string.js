@@ -1,4 +1,5 @@
 let text = `   Provashish Roy is a web developer and Provashish is a good boy`; 
+let stringArray = "P,r,o,v,a,h";
 let text2 = `Provashish Roy ${10 + 20}`; 
 let longText = "Hi I am provashish and my passion \"programming\" and my home is \\ghior\\ "; 
 let lengthOne = text.length;
@@ -17,6 +18,7 @@ console.log(y.padEnd(4, 0));
 console.log(text.repeat(5));
 console.log(text.replace(/provashish/i, 'Tonmoy'));
 console.log(text.replace(/Provashish/g, 'Tonmoy'));
+console.log(stringArray.split(" , "));
 
 
 //All string methods return a new string. They don't modify the original string.
