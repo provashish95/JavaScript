@@ -9,10 +9,10 @@ for(var i = 0; i < arrayNameOne.length; i++){
     //console.log('name is: ' + arrayNameOne[i]);
 }
 
-arrayNameOne.push('Provashish'); //add value in the last 
-arrayNameOne.pop(); //remove value from the last
+arrayNameOne.push('Provashish'); //ADD value in the last 
+arrayNameOne.pop(); //Remove value from the last
 arrayNameOne.unshift('Shipan'); //ADD value in the first
-arrayNameOne.shift(); //remove value from the first
+arrayNameOne.shift(); //Remove value from the first
 
 var number = [1,2,3,4,5,6,7,8,9,10,20,30,30];
 console.log('Main array is:' + number);
@@ -49,10 +49,10 @@ console.log('Array in forEach function: ' + value);
 
 person[person.length] = "Riya Roy";
 
-console.log(Array.isArray(person)); // check the varibel is array or not with Array.isArray() method.
+console.log(Array.isArray(person)); //check the varibel is array or not with Array.isArray() method.
 
 console.log(person.join(" + "));
-const jointArray = person.concat(arrayName); // add two array 
+const jointArray = person.concat(arrayName); //add two array 
 console.log(person.copyWithin(2,0));
 
 
@@ -93,7 +93,7 @@ console.log("Heighst value is: " + sortNumber[0]);
 console.log("Lowest value is: " + Math.min.apply(null, sortNumber));
 console.log("Heighst value is: " + Math.max.apply(null, sortNumber));
 
-//Sorting array object here....
+//Sorting array object here...
 const objectArray = [
     {type:"car1", year: 2012},
     {type:"car2", year: 2005},
