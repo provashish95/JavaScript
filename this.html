@@ -9,7 +9,30 @@
     
 <h1>This keyword in javascript</h1>
 
+<p id="demo"></p>
+
+
 <script>
+//DOM Manupulation here...
+    let heading = "This dom manupulation";
+    let tags = ["Javascript", "Es6", 'web development']; 
+
+    let html = `<h1>${heading}</h1><ul>`;
+    for(let x of tags){
+        html += `<li>${x}</li>`
+    }
+    html +=`</ul>`
+document.getElementById('demo').innerHTML = html;
+/*
+<p>
+<h1>This dom manupulation</h1>
+<ul>
+    <li>Javascript</li>
+    <li>Es6</li>
+    <li>web development</li>
+</ul>
+</p>
+*/
 
     function globalThis(){
         console.log(this);
