@@ -54,3 +54,14 @@ console.log(Array.isArray(person)); // check the varibel is array or not with Ar
 console.log(person.join(" + "));
 const jointArray = person.concat(arrayName); // add two array 
 console.log(person.copyWithin(2,0));
+
+
+const sortNumber = [40, 100, 2, 300, 20, 50]; 
+
+sortNumber.sort(
+    function(a, b){
+        return b - a; 
+    }
+)
+
+console.log(sortNumber);
