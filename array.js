@@ -92,3 +92,20 @@ console.log("Lowest value is: " + sortNumber[sortNumber.length-1]);
 console.log("Heighst value is: " + sortNumber[0]);
 console.log("Lowest value is: " + Math.min.apply(null, sortNumber));
 console.log("Heighst value is: " + Math.max.apply(null, sortNumber));
+
+//Sorting array object here....
+const objectArray = [
+    {type:"car1", year: 2012},
+    {type:"car2", year: 2005},
+    {type:"car3", year: 2020}
+];
+
+objectArray.sort(
+    function(a, b){
+        return a.year - b.year;
+    }
+);
+
+for(let i = 0; i < objectArray.length; i++){
+    console.log(objectArray[i].year);
+}
