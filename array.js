@@ -35,4 +35,22 @@ console.log(classNumber);
 var spliceClassArray = classNumber.splice(4,20); //splice (index number, totall number of element)
 console.log(spliceClassArray);
 
+const person = ['provashish', 'roy', 'tonmoy', 'shipan', 'shuvo', 'sabbir']; 
+console.log(person[person.length -1]);
+console.log(person.forEach(myFunction));
 
+for(let i = 0; i < person.length; i++){
+    console.log("for loop in array: " + person[i]);
+}
+
+function myFunction(value){
+console.log('Array in forEach function: ' + value);
+}
+
+person[person.length] = "Riya Roy";
+
+console.log(Array.isArray(person)); // check the varibel is array or not with Array.isArray() method.
+
+console.log(person.join(" + "));
+const jointArray = person.concat(arrayName); // add two array 
+console.log(person.copyWithin(2,0));
