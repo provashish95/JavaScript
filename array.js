@@ -58,10 +58,37 @@ console.log(person.copyWithin(2,0));
 
 const sortNumber = [40, 100, 2, 300, 20, 50]; 
 
+let min = Infinity; //The value Infinity (positive infinity) is greater than any other number.
+for(let i = 0; i < sortNumber.length; i++){ 
+    if(sortNumber[i] < min){
+        min = sortNumber[i];
+    }
+}
+console.log("Hand wroted code & minimum value is: " + min);
+
+//Method use here for finding lowest and heighst value from an array...
 sortNumber.sort(
     function(a, b){
         return b - a; 
     }
 )
+/* 
+how the function is work explain below here...
+Rules: 1. Result is (-) sort a. 
+       2. Result is (+) sort b. 
+       3. Result is (0) sorting value unchanged.
 
-console.log(sortNumber);
+1st iteratron: 
+a - b = 40 - 100 = -60, sort a = 40
+      = 40 - 2 = 38, sort b = 2
+      = 2 - 300 = -298, sort a = 2
+      = 2 - 20 = -18, sort a = 2
+      = 2 - 50 = - 48, sort a = 2
+so, array element 2, place the 0 index of array 
+Now, Array will be [2, 40, 100, 300, 20, 50];
+*/
+
+console.log("Lowest value is: " + sortNumber[sortNumber.length-1]);
+console.log("Heighst value is: " + sortNumber[0]);
+console.log("Lowest value is: " + Math.min.apply(null, sortNumber));
+console.log("Heighst value is: " + Math.max.apply(null, sortNumber));
