@@ -119,19 +119,3 @@ for(let i = 0; i < objectArray.length; i++){
 
 
 
-const test = [1,2,1,2,3,7,7,2,3,3,6]; 
-let arr = [];
-for (let i = 0; i<test.length; i++){
-    let isDuplicate = false;
-    for(let j = i+1; j<test.length; j++){
-       if(test[i] === test[j]){
-        isDuplicate = true;
-        break;
-       }
-    }
-
-    if(isDuplicate && !arr.includes(test[i])) {
-        arr.push(test[i]);
-    }
-}
-console.log(arr);
