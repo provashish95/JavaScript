@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array traversing</title>
+    <title>Array Traversing</title>
+    <script>
+
+        let data  = [2,4,20,10,1,3,80];
+        // for(let i = 0; i<data.length; i++){
+        //     document.write(`Array ${i} : ${data[i]} <br>`);
+        // }
+
+        function getElement(){
+           let el = document.getElementById('element').value
+           if(el < data.length && typeof parseInt(el) === "number" && el !=='' && el > 0){
+            alert(data[el]);
+           }else{
+            alert("data not found!");
+           }
+        }
+
+    </script>
 </head>
 <body>
     
+<input type="text" id="element" />
+<button onclick="getElement()">Get Element</button>
 
 
-<script>
-    
-</script>
 </body>
 </html>
