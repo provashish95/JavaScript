@@ -4,29 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array Traversing</title>
-    <script>
 
-        let data  = [2,4,20,10,1,3,80];
-        // for(let i = 0; i<data.length; i++){
-        //     document.write(`Array ${i} : ${data[i]} <br>`);
-        // }
-
-        function getElement(){
-           let el = document.getElementById('element').value
-           if(el < data.length && typeof parseInt(el) === "number" && el !=='' && el > 0){
-            alert(data[el]);
-           }else{
-            alert("data not found!");
-           }
-        }
-
-    </script>
 </head>
 <body>
     
 <input type="text" id="element" />
 <button onclick="getElement()">Get Element</button>
+<br>
+
+<h2>Array insert element in the middle</h2>
+
+<input type="text" id="position" placeholder="Position of an array" required/>
+<input type="text" id="value" placeholder="Value of an array" required/>
+<br>
+<p id="oldArray"></p>
+<button onclick="newArray()">See New Array</button>
+<br>
+<p id="newArray"></p>
 
 
+<script>
+
+    let data  = [2,4,20,10,1,3,80];
+    // for(let i = 0; i<data.length; i++){
+    //     document.write(`Array ${i} : ${data[i]} <br>`);
+    // }
+
+    function getElement(){
+       let el = document.getElementById('element').value
+       if(el < data.length && typeof parseInt(el) === "number" && el !=='' && el >= 0){
+        alert(data[el]);
+       }else{
+        alert("data not found!");
+       }
+    }
+
+//insert array elemt in the middle...
+    // let position = 2; 
+    // let newEl = 70; 
+    // console.log(data);
+
+    // for(let i = data.length-1; i>=0; i-- ){
+    //     if( i >= position){
+    //         data[i+1] = data[i];
+    //         if(i == position){
+    //             data[i] = newEl;
+    //         }
+    //     }
+        
+    // }
+    // console.log(`new array: ${data}`);
+    
+    let oldArray = `<h2> Old Array here </h2> <ul>`;
+        for(let i = 0; i < data.length; i++){
+            oldArray += `<li> ${data[i]}</li>`;
+        }
+        oldArray += `</ul>`;
+        document.getElementById('oldArray').innerHTML = oldArray;
+
+    function newArray(){
+       let position = document.getElementById('position').value;
+       let value = document.getElementById('value').value;
+
+       if(position < data.length && typeof parseInt(position) === 'number' && position !=='' && position >=0 && typeof parseInt(value) === 'number'){
+        for(let i = data.length - 1; i >=0; i--){
+        if( i >= position){
+            data[i+1] = data[i];
+            if(i == position){
+                data[i] = value;
+            }
+        }
+       }
+       let newArray = `<h2>New Array here </h2> <ul>`;
+        for(let i = 0; i <data.length; i++){
+            newArray += `<li> ${data[i]} </li>`;
+        }
+        newArray += `</ul>`;
+        document.getElementById('newArray').innerHTML = newArray;
+       }else{
+        alert('Enter valid input');
+       }
+    }
+
+</script>
 </body>
 </html>
