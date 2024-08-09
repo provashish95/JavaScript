@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Delete</title>
+</head>
+<body>
+    
+<h2>Main Array</h2>
+<p id="mainArray"></p>
+
+<input type="text" id="position" placeholder="Enter index number..."/>
+<button onclick="deleteArray()">Delete</button> <br>
+
+<h2>After deleted Array</h2>
+<p id="deleteArray"></p>
+
+
+
+<script>
+    let data = [10,20,5,30,40,50];
+
+    let mainArray = `<ul>`;
+        for(let i = 0; i <data.length; i++){
+            mainArray += `<li> ${data[i]} </li>`;
+        }
+        mainArray += `</ul>`
+        document.getElementById('mainArray').innerHTML = mainArray;
+
+    function deleteArray(){
+        let position = parseInt(document.getElementById('position').value);
+
+    for(let i = position; i < data.length; i++){
+        data[i] = data[i+1];
+    }
+    data.length = data.length-1;
+ 
+    let newArray = `<ul>`;
+        for(let i = 0; i <data.length; i++){
+            newArray += `<li> ${data[i]} </li>`;
+        }
+        newArray += `</ul>`;
+        document.getElementById('deleteArray').innerHTML = newArray;
+    }
+
+</script>
+</body>
+</html>
