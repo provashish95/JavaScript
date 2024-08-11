@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Array Element</title>
+</head>
+<body>
+    
+<h2>Linear Search in Array</h2>
+
+    <script>
+        let data = [10,20,9,30,40,50];
+        let item = 40;
+        let index = undefined;
+        for(let i = 0; i < data.length; i++){
+           if(data[i] === item){
+            index = i;
+            break;
+           }
+        }
+        // console.log(index);
+        // console.log(data.indexOf(item));
+        // data.splice(2,1);
+        // console.log(data);
+
+
+//merge two array in one array...
+
+        array1 = [1,23,4,5,6,7,8];
+        array2 = [10,20,30,40,50];
+        array3 = [];
+        // console.log(array3 = [...array1, ...array2]);
+
+        for(let i = 0; i < array1.length; i++){
+            array3[i] = array1[i];
+        }
+        for(let i = 0; i < array2.length; i++){
+            array3[array3.length + i] = array2[i];
+        }
+         console.log(array3);
+        // console.log(array1.reverse());
+
+    </script>
+</body>
+</html>
