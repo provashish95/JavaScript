@@ -48,3 +48,18 @@ console.log(demoOne.age);
 for(let properties in demoOne){
     console.log(demoOne[properties]);
 }
+
+//convert object as a array...
+var obj = {
+    name: "Provashish", 
+    age: 20, 
+    address: "Tangail", 
+    NID: 2299
+};
+var result = Object.entries(obj);
+console.log(result[0][1]);
+
+//for in loop use for object only...
+for(let key in obj){
+    console.log(obj[key]);
+}

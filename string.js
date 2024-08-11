@@ -35,3 +35,5 @@ console.log(text.includes('web')); // if a word is present in the string so it r
 
 //All string methods return a new string. They don't modify the original string.
 //Strings are immutable: Strings cannot be changed, only replaced.
+
+
