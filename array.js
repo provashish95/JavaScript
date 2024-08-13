@@ -118,7 +118,3 @@ for(let i = 0; i < objectArray.length; i++){
 
 
 
-
-
-
-
