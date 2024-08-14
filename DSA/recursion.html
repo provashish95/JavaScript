@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion data structure</title>
+</head>
+<body>
+    
+    <script>
+//Recursion ... means called itself depend on condition...
+
+        // function apple(x){
+        //     console.log(x);
+        //     if(x < 10){
+        //         apple(x+1);
+        //     }
+        // }
+        // let n = 0;
+        // apple(n);
+
+//Find out factorial number...
+//!5 = 5*4*3*2*1 = 120 is result ...
+/*
+        int n = 5; 
+        int fact = 1;
+        for( i = n; i <= n; i--){
+            fact = i * fact;
+        }
+*/
+
+function factorial(n){
+    if(n ==0 ){
+        return 1; 
+    }
+    return n * factorial(n - 1);
+}
+let n = 5; 
+let Fact = factorial(n);
+console.log(Fact);
+
+    </script>
+</body>
+</html>
