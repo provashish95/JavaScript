@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array Sort</title>
 </head>
+
 <body>
-    
+
     <script>
         //Bubble sort... size x size = 4 x 4 = 16 loop
-        const data = [20,10,30,25];
+        const data = [20, 10, 30, 25];
 
-        for(let i = 0; i < data.length; i++){
-            for(let j = 0; j < data.length; j++){
-                
-                if( data[j] > data[j+1]){
-                    let temp = data[j]; 
-                    data[j] = data[j+1]; 
-                    data[j+1] = temp;
+        for (let i = 0; i < data.length; i++) {
+            for (let j = 0; j < data.length; j++) {
+
+                if (data[j] > data[j + 1]) {
+                    let temp = data[j];
+                    data[j] = data[j + 1];
+                    data[j + 1] = temp;
                 }
                 console.log(data);
             }
@@ -26,4 +28,5 @@
 
     </script>
 </body>
+
 </html>
