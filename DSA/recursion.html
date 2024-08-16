@@ -38,7 +38,7 @@
         }
         let n = 5;
         let Fact = factorial(n);
-        console.log(Fact);
+        //console.log(Fact);
 
         //Indirect recursion ...
         /*
@@ -51,6 +51,41 @@
                 apple();
             }
         */
+
+        let money = 100;
+        let totalApple = 0;
+
+        function buyApple(x) {
+            if (x > 0) {
+                console.log("I have ", x, " TK and ", totalApple, " Apple");
+                buyMore(x);
+            } else {
+                console.log("I do not have more money");
+            }
+        }
+
+        function buyMore(x){
+            totalApple++;
+            buyApple(x - 20);
+        }
+
+        buyApple(money);
+
+//Print 1 to 20 using function recursion ....
+        function myLoopFuction (value){
+            if(value <= 20){
+                console.log(value);
+                value = value + 1
+                myLoopFuction(value);
+            }else{
+                console.log("The End");
+            }
+        }
+
+        myLoopFuction(1);
+
+
+
 
     </script>
 </body>
