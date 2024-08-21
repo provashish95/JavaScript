@@ -9,3 +9,17 @@ let num2 = 0;
 
 console.log(typeof(typeof(Infinity)));
 
+
+//Javascript class...
+
+class Car {
+    constructor(name, year){
+        this.name = name; 
+        this.year = year;
+    }
+}
+
+const car1 = new Car("Audi", 2012); 
+const car2 = new Car("BMW", 2015); 
+
+console.log(car1.name , car2.name);
