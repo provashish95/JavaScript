@@ -38,3 +38,23 @@ for(let [key, values] of Object.entries(studentTwo)){
 for(let [key, values] of Object.entries(studentThree)){
     console.log(key + ": " + values);
 }
+
+// Object.fromEntries() method ...
+const fruits = [
+    ["apples", 300],
+    ["pears", 900],
+    ["bananas", 500]
+  ];
+
+
+const fruitsObj = Object.fromEntries(fruits); //make a list into object formate.
+const entries = Object.entries(persone); //make an object into twi dimentional array.
+const value = Object.values(persone); // make an object into one dimentional array.
+const keys = Object.keys(persone); //return an array with all keys of an object.
+
+//Object propeties method....
+Object.defineProperty(persone, "passion", {value: "coding"});  //Adding a new Property
+Object.defineProperty(persone, "age", {value: 300});  //Changing a Property Value
+const names = Object.getOwnPropertyNames(persone); //List all Object Properties with Array
+Object.defineProperty(persone, "age", {enumerable: false}); 
+console.log(Object.keys(persone));

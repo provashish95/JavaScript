@@ -63,3 +63,6 @@ console.log(result[0][1]);
 for(let key in obj){
     console.log(obj[key]);
 }
+
+
+
