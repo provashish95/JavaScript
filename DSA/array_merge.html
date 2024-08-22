@@ -14,7 +14,7 @@
         let array2 = [80,90,10,30]; 
         let array3= [];
         array3 = [...array1, ...array2];
-        console.log(array3);
+        //console.log(array3);
 
         for(let i = 0; i < array1.length; i++){
             array3[i] = array1[i]; 
@@ -22,7 +22,46 @@
         for(let i = 0; i < array2.length; i++){
             array3[array3.length + i] = array2[i];
         }
-        console.log(array3);
+        //console.log(array3);
+    
+//Array sort with while loop ...
+
+        let data1 = [3, 7, 12, 34, 56, 90];
+        let data2 = [4, 9, 25, 45];
+        let data3 = [];
+        let d1 = 0;
+        let d2 = 0;
+        let d3 = 0;
+
+        while(d1 < data1.length && d2 < data2.length){
+            if(data1[d1] < data2[d2]){
+                data3[d3] = data1[d1];
+                d1++;
+            }else{
+                data3[d3] = data2[d2];
+                d2++;
+            }
+            d3++;
+        }
+
+        while(d1 < data1.length){
+            data3[d3] = data1[d1];
+            d1++;
+            d3++;
+        }
+        console.log(data3);
+
+
+
+        const loop = [1,2,3];
+        for(let i =0; i<loop.length; i++){
+            console.log(`count loop of i: ${i}`);
+            for(let j= 0; j< loop.length; j++){
+                console.log(`count loop of j: ${j}`);
+            }
+        }
+
+
 
 
     </script>
