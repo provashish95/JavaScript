@@ -70,3 +70,14 @@ for (let i = 0; i<test.length; i++){
 }
 console.log(arr);
 
+
+//find out how many roy word in this sentence and what is the index of first roy word? ....
+const text = "My name is provashish roy and roy is one of the best roy and think Roy"; 
+let word = text.match(/Roy/gi);
+let count = word ? word.length : 0; 
+let indexNumber = text.search(/Roy/gi) >= 0 ? text.search(/Roy/gi) : "Not found"; 
+
+console.log(`Total roy word is : ${count} and the index number of first roy word is: ${indexNumber}`);
+
+
+
