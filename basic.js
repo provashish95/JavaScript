@@ -106,3 +106,5 @@ console.log(n); // 9
 // varibale --/++   varibale
 
 // --/++ varibale 
+
+const service = [12,234,345,46,6,7,777,777];
